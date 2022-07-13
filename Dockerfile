@@ -30,7 +30,7 @@ RUN curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx -o /usr
     && chmod +x /usr/local/bin/kubectx /usr/local/bin/kubens
 
 # k9s
-RUN curl -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_v${K9S_VERSION}_Linux_x86_64.tar.gz -o /tmp/k9s.tar.gz \
+RUN curl -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Linux_x86_64.tar.gz -o /tmp/k9s.tar.gz \
   && tar -xf /tmp/k9s.tar.gz \
   && chmod +x k9s \
   && mv k9s /usr/local/bin/
