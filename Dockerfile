@@ -10,7 +10,7 @@ ARG HELM3_VERSION=3.9.1
 ARG K9S_VERSION=0.25.21
 
 # Install utilities
-RUN apt-get update -y && apt-get install -y curl jq ca-certificates git vim bash-completion
+RUN apt-get update -y && DEBIAN_FRONTEND="noninteractive"  apt-get install -y curl jq ca-certificates git vim bash-completion awscli
 
 # kubectl with bash completion
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
